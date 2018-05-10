@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com/basic/multiplescenarioSD/"},
 		plugin={"pretty",
 				"html:target/cucumberhtmlreport",
-				"html:target/cucumber-report3.json",
+				"json:target/cucumber-report3.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport_MultipleScenario.html"
 				}
 		)
