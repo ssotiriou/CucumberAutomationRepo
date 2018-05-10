@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com/basic/HooksSD/"},
 		plugin={"pretty",
 				"html:target/cucumberhtmlreport",
-				"html:target/cucumber-report_Hooks.json",
+				"html:target/cucumber-report2.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport_Hooks.html"
 				}
 		)

@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com/basic/ShareDataSD/"},
 		plugin={"pretty",
 				"html:target/cucumberhtmlreport",
-				"html:target/cucumber-report_ShareData.json",
+				"html:target/cucumber-report6.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport_ShareData.html"
 				}
 		)

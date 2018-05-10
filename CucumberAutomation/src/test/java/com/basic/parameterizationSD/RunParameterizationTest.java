@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com/basic/parameterizationSD/"},
 		plugin={"pretty",
 				"html:target/cucumberhtmlreport",
-				"html:target/cucumber-report_Parameterization.json",
+				"html:target/cucumber-report5.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport_Parameterization.html"
 				}
 		)

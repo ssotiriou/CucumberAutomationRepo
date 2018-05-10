@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		glue= {"com/basic/FirstFeatureFile/"},
 		plugin={"pretty",
 				"html:target/cucumberhtmlreport",
-				"html:target/cucumber-report_FirstFeature.json",
+				"html:target/cucumber-report1.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport_FirstFeature.html"
 				}
 		)
