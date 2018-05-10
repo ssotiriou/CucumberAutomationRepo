@@ -23,6 +23,7 @@ public class MyFirstStepDef {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
+		//TESTER CHANGE FOR GIT
 		
 	}
 	
