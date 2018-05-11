@@ -71,12 +71,21 @@
     		<artifactId>mongodb-driver</artifactId>
     		<version>3.0.4</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.temyers/cucumber-jvm-parallel-plugin -->
+		<dependency>
+    		<groupId>com.github.temyers</groupId>
+    		<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+    		<version>5.0.0</version>
+		</dependency>
 		
-		
-  </dependencies>
+   </dependencies>
+  
+  
+  
 
   <build>
-  	<plugins>
+  
+   	<plugins>
   	  <plugin>
   	    <groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-compiler-plugin</artifactId>
@@ -86,6 +95,7 @@
   			<target>1.8</target>
   			</configuration>
   	  </plugin>
+ 	  
   	</plugins>
   </build>
  
