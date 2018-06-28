@@ -130,15 +130,15 @@
             <version>2.19</version>
             <!-- added configuration mappings for parallel running -->
             <configuration>
-            	<!-- option for multi-thread but no JVM -->
+            	<!-- option for multi-thread but no JVM 
             	<parallel>classes</parallel>
             	<forkMode>perthread</forkMode>
             	<threadCount>3</threadCount>
-            	
-            	<!-- option for multi-thread separate JVM 
+            	-->
+            	<!-- option for multi-thread separate JVM --> 
             	<forkCount>3</forkCount>
             	<reuseForks>true</reuseForks>
-            	-->
+            	
             	
             	
             	<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
