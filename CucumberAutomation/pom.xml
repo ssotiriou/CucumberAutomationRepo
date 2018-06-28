@@ -116,6 +116,9 @@
   			<artifactId>maven-compiler-plugin</artifactId>
   			<version>3.1</version>
   			<configuration>
+  			<!-- added fork and executable statements for parallel -->
+  			<fork>true</fork>
+  			<executable>C:\Program Files\Java\jdk1.8.0_161\bin\javac.exe</executable>
   			<source>1.8</source>
   			<target>1.8</target>
   			</configuration>
@@ -125,16 +128,33 @@
 	<plugin>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.19</version>
+            <!-- added configuration mappings -->
+            <configuration>
+            	<parallel>classes</parallel>
+            	<forkMode>perthread</forkMode>
+            	<threadCount>3</threadCount>
+            	<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+            	<includes>
+            		<include>**/*Test.java</include>
+            	</includes>
+            </configuration>
             <dependencies>
                <dependency>
                   <groupId>org.junit.platform</groupId>
                   <artifactId>junit-platform-surefire-provider</artifactId>
                   <version>1.0.0</version>
                </dependency>
- 
- 
-            </dependencies>
+             </dependencies>
     </plugin>
+ 
+ 	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.22.0</version>
+    </plugin>
+ 
+ 
+ 
   	 	  
   	</plugins>
  </build>
