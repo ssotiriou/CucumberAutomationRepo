@@ -130,9 +130,16 @@
             <version>2.19</version>
             <!-- added configuration mappings for parallel running -->
             <configuration>
+            	<!-- option for multi-thread without JVM 
             	<parallel>classes</parallel>
             	<forkMode>perthread</forkMode>
-            	<threadCount>1</threadCount>
+            	<threadCount>3</threadCount>
+            	-->
+            	<forkCount>6</forkCount>
+            	<reuseForks>true</reuseForks>
+            	
+            	
+            	
             	<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
             	<includes>
             		<include>**/*Test.java</include>
