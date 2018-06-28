@@ -130,14 +130,13 @@
             <version>2.19</version>
             <!-- added configuration mappings for parallel running -->
             <configuration>
+            	<!-- option for multi-thread but no JVM -->
             	<parallel>classes</parallel>
             	<forkMode>perthread</forkMode>
-            	<threadCount>6</threadCount>
+            	<threadCount>3</threadCount>
             	
             	<!-- option for multi-thread separate JVM 
-            	<parallel>classes</parallel>
-            	<threadCount>3</threadCount>
-            	<forkCount>6</forkCount>
+            	<forkCount>3</forkCount>
             	<reuseForks>true</reuseForks>
             	-->
             	

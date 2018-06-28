@@ -1,11 +1,17 @@
 package com.basic.HooksSD;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -19,8 +25,9 @@ public class HooksStepDef {
 	
 	private WebDriver driver;
 	
+	
 	@Before(order=1)
-	public void beforeSetup1() {
+	public void beforeSetup1() throws MalformedURLException {
 		System.out.println("PROCESSING BEFORE1");
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\selenium 3 installs\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
