@@ -33,5 +33,13 @@ public class GoogleStepDef {
 		driver.findElement(By.xpath("//input[@id='lst-ib']")).sendKeys("selenium");
 		Thread.sleep(1000);
 	}
+
+	@Then("^Close browser quickly$")
+	public void Close_browser() {
+		driver.quit();
+		driver=null;
+	}
+	
+	
 	
 }

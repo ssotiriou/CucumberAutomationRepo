@@ -54,6 +54,7 @@ public class MyFirstStepDef {
 		String userNameActual = driver.findElement(By.xpath("//input[@id='u_0_l']")).getAttribute("value");
 		Assert.assertEquals("David", userNameActual);
 		driver.quit();
+		driver=null;
 	}
 	
 	

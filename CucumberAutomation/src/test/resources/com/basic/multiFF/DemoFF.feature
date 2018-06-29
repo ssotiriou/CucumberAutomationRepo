@@ -8,6 +8,7 @@ As a user you need to validate the first and last name of the automation testing
     Given That the user is on the demo site page
     When User enters first name
     When User enters last name
+    Then Close browser promptly
     
     
  

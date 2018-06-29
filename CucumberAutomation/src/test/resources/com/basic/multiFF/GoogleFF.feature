@@ -7,6 +7,7 @@ As a user you need to validate the google search feature
   Scenario: Validate Search Field (Google)
     Given That the user is on google home page
     When User enters search string
+    Then Close browser quickly
     
  
 	

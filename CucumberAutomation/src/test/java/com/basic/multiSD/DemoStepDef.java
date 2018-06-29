@@ -42,5 +42,12 @@ public class DemoStepDef {
 		Thread.sleep(1000);
 	}
 	
+	@Then("^Close browser promptly$")
+	public void Close_browser() {
+		driver.quit();
+		driver=null;
+	}
+	
+	
 	
 }
