@@ -1,11 +1,18 @@
 package com.basic.parameterizationSD;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
@@ -16,12 +23,19 @@ import cucumber.api.java.en.When;
 public class ParameterizationStepDef {
 	
 	private WebDriver driver;
-	
+	String nodeURL = "http://192.168.0.17:6667/wd/hub";
 	
 	@Given("^That the User is on the Facebook login page$")
-	public void the_User_is_on_the_Facebook_login_page() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\selenium 3 installs\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
+	public void the_User_is_on_the_Facebook_login_page() throws InterruptedException, MalformedURLException {
+		//System.setProperty("webdriver.chrome.driver","C:\\Users\\User\\Desktop\\selenium 3 installs\\chromedriver_win32\\chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
+		driver = new RemoteWebDriver(new URL(nodeURL), options);
+		
+		
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
