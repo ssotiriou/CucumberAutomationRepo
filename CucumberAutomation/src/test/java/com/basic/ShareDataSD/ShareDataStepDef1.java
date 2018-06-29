@@ -1,5 +1,6 @@
 package com.basic.ShareDataSD;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -17,7 +18,7 @@ public class ShareDataStepDef1 {
 	
 	WebDriver driver;
 	
-	public ShareDataStepDef1(SharedClass share) {
+	public ShareDataStepDef1(SharedClass share) throws MalformedURLException {
 		driver = share.setup();
 	}
 	

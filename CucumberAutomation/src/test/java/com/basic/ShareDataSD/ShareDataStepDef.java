@@ -1,5 +1,6 @@
 package com.basic.ShareDataSD;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
@@ -18,7 +19,7 @@ public class ShareDataStepDef {
 	
 	WebDriver driver;
 	
-	public ShareDataStepDef(SharedClass share) {
+	public ShareDataStepDef(SharedClass share) throws MalformedURLException {
 		driver = share.setup();
 	}
 		
