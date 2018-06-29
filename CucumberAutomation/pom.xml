@@ -136,7 +136,7 @@
             	<threadCount>3</threadCount>
             	-->
             	<!-- option for multi-thread separate JVM --> 
-            	<forkCount>1</forkCount>
+            	<forkCount>6</forkCount>
             	<reuseForks>true</reuseForks>
             	
             	
